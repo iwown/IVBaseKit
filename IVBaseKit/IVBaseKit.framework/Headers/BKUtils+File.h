@@ -38,5 +38,5 @@
 
 + (NSString*) FilePaths:(NSString*)fileName;
 
-
++ (NSString*)getFileMD5WithPath:(NSString*)path;
 @end
