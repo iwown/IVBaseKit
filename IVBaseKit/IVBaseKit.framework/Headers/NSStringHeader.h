@@ -15,5 +15,5 @@
 #import <IVBaseKit/NSString+Json.h>
 #import <IVBaseKit/NSString+MD5.h>
 #import <IVBaseKit/NSString+pinyin.h>
-
+#import <IVBaseKit/NSString+URLEncoding.h>
 #endif /* NSStringHeader_h */

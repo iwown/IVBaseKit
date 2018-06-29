@@ -31,10 +31,12 @@
 @interface BKUtils : NSObject
 
 #pragma mark 正则表达式
+//以1开始的11位手机号验证
 + (BOOL)checkPhoneNumInput:(NSString *)numStr;
+//蓝牙地址
 + (BOOL)isMACAdress:(NSString *)str;
+//俱乐部地址
 + (BOOL)isMatchClubAdress:(NSString *)str ;
-
 //邮箱
 + (BOOL)validateEmail:(NSString *)email;
 //手机号
@@ -44,4 +46,11 @@
 //密码
 + (BOOL)validatePassword:(NSString *)passWord;
 
+//星期显示
++ (NSString *)displayString:(Byte)days;
+
+//发送本地推送
++ (void)pushLocalMessageWithContent:(NSString *)contentBody
+                    andContentTitle:(NSString *)title
+                          soundName:(NSString *)soundName;
 @end

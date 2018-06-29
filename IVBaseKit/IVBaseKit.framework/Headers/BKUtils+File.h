@@ -36,7 +36,9 @@
 
 + (void)checkFlieProtection:(NSString *)path ;
 
-+ (NSString*) FilePaths:(NSString*)fileName;
++ (NSString*)FilePaths:(NSString*)fileName;
+
++ (NSUInteger)fileSizes:(NSString *)filePath;
 
 + (NSString*)getFileMD5WithPath:(NSString*)path;
 @end
