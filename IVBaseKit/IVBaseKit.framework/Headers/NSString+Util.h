@@ -18,5 +18,6 @@
 
 - (int)countWordLenth;
 
+- (BOOL)isContainsEmoji;
 
 @end
