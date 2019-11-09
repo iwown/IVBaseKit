@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 s.name         = 'IVBaseKit'
 
-s.version      = "1.2.1"
+s.version      = "1.2.2"
 
 s.summary      = 'Base class used in iwown iOS developer team'
 
