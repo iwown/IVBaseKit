@@ -10,13 +10,8 @@
 
 @implementation NSString (URLEncoding)
 
-- (NSString *)urlEncodeString
-{
-    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                                             (CFStringRef)self,
-                                                                                             NULL,
-                                                                                             (CFStringRef)@";/?:@&=$+{}<>,",
-                                                                                             kCFStringEncodingUTF8));
+- (NSString *)urlEncodeString {
+    NSString *result = [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     return result;
 }
 
