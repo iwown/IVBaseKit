@@ -27,7 +27,6 @@
 		D65DE65C2376C057008B4552 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE63B2376C057008B4552 /* NSDate+Category.m */; };
 		D65DE65D2376C057008B4552 /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE63F2376C057008B4552 /* NSDateFormatter+Category.m */; };
 		D65DE65E2376C057008B4552 /* NSDate+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE6402376C057008B4552 /* NSDate+Calendar.m */; };
-		D65DE65F2376C057008B4552 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE6442376C057008B4552 /* FBKVOController.m */; };
 		D65DE6602376C057008B4552 /* IVUIDeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE6462376C057008B4552 /* IVUIDeviceTool.m */; };
 		D65DE6612376C057008B4552 /* BKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE64B2376C057008B4552 /* BKUtils.m */; };
 		D65DE6622376C057008B4552 /* BKUtils+File.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE64C2376C057008B4552 /* BKUtils+File.m */; };
@@ -86,8 +85,6 @@
 		D65DE63E2376C057008B4552 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		D65DE63F2376C057008B4552 /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
 		D65DE6402376C057008B4552 /* NSDate+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendar.m"; sourceTree = "<group>"; };
-		D65DE6432376C057008B4552 /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
-		D65DE6442376C057008B4552 /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
 		D65DE6462376C057008B4552 /* IVUIDeviceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVUIDeviceTool.m; sourceTree = "<group>"; };
 		D65DE6472376C057008B4552 /* IVUIDeviceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVUIDeviceTool.h; sourceTree = "<group>"; };
 		D65DE6492376C057008B4552 /* BKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKUtils.h; sourceTree = "<group>"; };
@@ -251,7 +248,6 @@
 		D65DE6412376C057008B4552 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D65DE6422376C057008B4552 /* FBKVOController */,
 				D65DE6452376C057008B4552 /* IVDeviceTool */,
 				D65DE6482376C057008B4552 /* BKUtils */,
 				D65DE64D2376C057008B4552 /* WeakProxy */,
@@ -259,15 +255,6 @@
 				D65DE6512376C057008B4552 /* AppInfo.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		D65DE6422376C057008B4552 /* FBKVOController */ = {
-			isa = PBXGroup;
-			children = (
-				D65DE6432376C057008B4552 /* FBKVOController.h */,
-				D65DE6442376C057008B4552 /* FBKVOController.m */,
-			);
-			path = FBKVOController;
 			sourceTree = "<group>";
 		};
 		D65DE6452376C057008B4552 /* IVDeviceTool */ = {
@@ -415,7 +402,6 @@
 				D65DE65B2376C057008B4552 /* NSObject+JsonData.m in Sources */,
 				D65DE60D2376C043008B4552 /* main.m in Sources */,
 				D65DE5FF2376C03E008B4552 /* SceneDelegate.m in Sources */,
-				D65DE65F2376C057008B4552 /* FBKVOController.m in Sources */,
 				D65DE65A2376C057008B4552 /* NSAttributedString+custom.m in Sources */,
 				D65DE6632376C057008B4552 /* CWWeakProxy.m in Sources */,
 				D65DE6592376C057008B4552 /* NSArray+OutOfIndex.m in Sources */,

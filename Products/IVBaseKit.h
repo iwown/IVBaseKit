@@ -9,7 +9,6 @@
 // In this header, you should import all the public headers of your framework using statements like #import "PublicHeader.h"
 
 #import "AppInfo.h"
-#import "FBKVOController.h"
 #import "IVUIDeviceTool.h"
 #import "BKUtils.h"
 #import "BKUtils+File.h"

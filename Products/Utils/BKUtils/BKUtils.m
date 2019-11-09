@@ -173,41 +173,26 @@
 + (void)pushLocalMessageWithContent:(NSString *)contentBody
                     andContentTitle:(NSString *)title
                           soundName:(NSString *)soundName {
-    
-    if (@available(iOS 10,*)) {
-        //通知内容类
-        UNMutableNotificationContent * content = [UNMutableNotificationContent new];
-        content.badge = @1;
-        content.body = contentBody;
-        if (soundName == nil) {
-            content.sound =  [UNNotificationSound defaultSound];
-        } else {
-            content.sound = [UNNotificationSound soundNamed:soundName];
-        }
-        content.title = title;
-        UNTimeIntervalNotificationTrigger * trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
-        UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:@"NotificationDefault" content:content trigger:trigger];
-        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-            if (!error) {
-                NSLog(@"发送本地推送成功 ");
-            }
-            else{
-                NSLog(@"发送本地推送失败 error = %@",error);
-            }
-        }];
-    }else {
-        //发送本地推送
-        if (soundName == nil) {
-            soundName =  UILocalNotificationDefaultSoundName;
-        }
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.fireDate = [NSDate date];
-        notification.alertBody = contentBody;
-        notification.alertAction = NSLocalizedString(@"Open", nil);
-        notification.soundName = soundName;
-        notification.timeZone = [NSTimeZone defaultTimeZone];
-        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    }
+   //通知内容类
+   UNMutableNotificationContent * content = [UNMutableNotificationContent new];
+   content.badge = @1;
+   content.body = contentBody;
+   if (soundName == nil) {
+       content.sound =  [UNNotificationSound defaultSound];
+   } else {
+       content.sound = [UNNotificationSound soundNamed:soundName];
+   }
+   content.title = title;
+   UNTimeIntervalNotificationTrigger * trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
+   UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:@"NotificationDefault" content:content trigger:trigger];
+   [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+       if (!error) {
+           NSLog(@"发送本地推送成功 ");
+       }
+       else{
+           NSLog(@"发送本地推送失败 error = %@",error);
+       }
+   }];
 }
 
 @end
