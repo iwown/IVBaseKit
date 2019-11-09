@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 s.name         = 'IVBaseKit'
 
-s.version      = "1.2.0"
+s.version      = "1.2.1"
 
 s.summary      = 'Base class used in iwown iOS developer team'
 
@@ -14,13 +14,11 @@ s.homepage     = 'https://github.com/xuezou/IVBaseKit'
 
 s.source       = { :git => "https://github.com/xuezou/IVBaseKit.git", :tag => s.version}
 
+s.source_files = "Products/", "Products/**/*.{h,m}"
+
 s.platform     = :ios
 
-s.ios.deployment_target = "8.0"
-
-s.frameworks = 'Foundation'
-
-s.vendored_frameworks = 'IVBaseKit/IVBaseKit.framework'
+s.ios.deployment_target = "10.0"
 
 s.requires_arc = true
 
