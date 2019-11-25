@@ -1,3 +1,7 @@
+
+### Version:1.3.1 2019-11-25 add some tools from BLESDK 
+
+
 ### IVBaseKit Produce
 Foundation toolkit based on Foundation and UIKit, including basic processing iOS development tools such as string processing, time formulation, image color, general UIControl, file processing.
 
