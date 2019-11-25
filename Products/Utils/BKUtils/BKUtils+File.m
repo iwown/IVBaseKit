@@ -28,25 +28,6 @@
     return [fileManager fileExistsAtPath:filePath];
 }
 
-//文件是否存在
-+ (BOOL) isFileExist:(NSString *)fileName {
-    NSString *fullPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:fileName];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    BOOL result = [fileManager fileExistsAtPath:fullPath];
-    return result;
-}
-
-//设置数据库文件路径 沙盒
-+ (NSString*) FilePaths:(NSString*)fileName {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    if ([paths count] == 0) {
-        return (id)NO;
-    }
-    NSString *documentDirectory = [paths objectAtIndex:0];
-    NSString *dbPath = [documentDirectory stringByAppendingPathComponent:fileName];
-    return dbPath;
-}
-
 + (NSUInteger)fileSizes:(NSString *)filePath {
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -57,27 +38,6 @@
     }
     unsigned long long length = [fileAttributes fileSize];
     return (NSUInteger)length;
-}
-
-+ (void)copyPreferencesLogFire {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSAllLibrariesDirectory, NSUserDomainMask, YES);
-    NSString *preferencePath = [paths objectAtIndex:0];
-    NSString *plistPath = [preferencePath stringByAppendingPathComponent:@"Preferences/leopard.iwble.plist"];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    BOOL result = [fileManager fileExistsAtPath:plistPath];
-    if (!result) {
-        return;
-    }
-    NSError *error = nil;
-    NSString *toPath = [self FilePaths:@"leopard.iwble.plist"];
-    if ([fileManager fileExistsAtPath:toPath]) {
-        [fileManager removeItemAtPath:toPath error:nil];
-        
-    }
-    [fileManager copyItemAtPath:plistPath toPath:toPath error:&error];
-    
-    NSDictionary *dict3d = [fileManager attributesOfItemAtPath:plistPath error:&error];
-    NSLog(@"属性：%@",dict3d);
 }
 
 //创建文件夹

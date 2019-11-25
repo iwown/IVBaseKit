@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57092C6C23866CC3000AD25A /* NSString+BLEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 57092C6A23866CC3000AD25A /* NSString+BLEUtils.m */; };
 		D65DE5FC2376C03E008B4552 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE5FB2376C03E008B4552 /* AppDelegate.m */; };
 		D65DE5FF2376C03E008B4552 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE5FE2376C03E008B4552 /* SceneDelegate.m */; };
 		D65DE6022376C03E008B4552 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DE6012376C03E008B4552 /* ViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57092C6A23866CC3000AD25A /* NSString+BLEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BLEUtils.m"; sourceTree = "<group>"; };
+		57092C6B23866CC3000AD25A /* NSString+BLEUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BLEUtils.h"; sourceTree = "<group>"; };
 		D65DE5F72376C03E008B4552 /* IVBaseKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IVBaseKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65DE5FA2376C03E008B4552 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D65DE5FB2376C03E008B4552 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -188,19 +191,21 @@
 		D65DE6232376C057008B4552 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				D65DE6242376C057008B4552 /* NSString+URLEncoding.h */,
-				D65DE6252376C057008B4552 /* NSString+pinyin.m */,
-				D65DE6262376C057008B4552 /* NSString+MD5.h */,
-				D65DE6272376C057008B4552 /* NSString+FontAwesome.h */,
-				D65DE6282376C057008B4552 /* NSString+Util.m */,
+				57092C6B23866CC3000AD25A /* NSString+BLEUtils.h */,
+				57092C6A23866CC3000AD25A /* NSString+BLEUtils.m */,
+				D65DE6302376C057008B4552 /* NSString+Json.h */,
 				D65DE6292376C057008B4552 /* NSString+Json.m */,
+				D65DE6242376C057008B4552 /* NSString+URLEncoding.h */,
 				D65DE62A2376C057008B4552 /* NSString+URLEncoding.m */,
 				D65DE62B2376C057008B4552 /* NSString+Util.h */,
+				D65DE6282376C057008B4552 /* NSString+Util.m */,
+				D65DE6272376C057008B4552 /* NSString+FontAwesome.h */,
 				D65DE62C2376C057008B4552 /* NSString+FontAwesome.m */,
+				D65DE6262376C057008B4552 /* NSString+MD5.h */,
 				D65DE62D2376C057008B4552 /* NSString+MD5.m */,
 				D65DE62E2376C057008B4552 /* NSString+pinyin.h */,
+				D65DE6252376C057008B4552 /* NSString+pinyin.m */,
 				D65DE62F2376C057008B4552 /* NSStringHeader.h */,
-				D65DE6302376C057008B4552 /* NSString+Json.h */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -235,11 +240,11 @@
 		D65DE63A2376C057008B4552 /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
+				D65DE63E2376C057008B4552 /* NSDate+Category.h */,
 				D65DE63B2376C057008B4552 /* NSDate+Category.m */,
 				D65DE63C2376C057008B4552 /* NSDateFormatter+Category.h */,
-				D65DE63D2376C057008B4552 /* NSDate+Calendar.h */,
-				D65DE63E2376C057008B4552 /* NSDate+Category.h */,
 				D65DE63F2376C057008B4552 /* NSDateFormatter+Category.m */,
+				D65DE63D2376C057008B4552 /* NSDate+Calendar.h */,
 				D65DE6402376C057008B4552 /* NSDate+Calendar.m */,
 			);
 			path = NSDate;
@@ -403,6 +408,7 @@
 				D65DE60D2376C043008B4552 /* main.m in Sources */,
 				D65DE5FF2376C03E008B4552 /* SceneDelegate.m in Sources */,
 				D65DE65A2376C057008B4552 /* NSAttributedString+custom.m in Sources */,
+				57092C6C23866CC3000AD25A /* NSString+BLEUtils.m in Sources */,
 				D65DE6632376C057008B4552 /* CWWeakProxy.m in Sources */,
 				D65DE6592376C057008B4552 /* NSArray+OutOfIndex.m in Sources */,
 				D65DE6562376C057008B4552 /* NSString+URLEncoding.m in Sources */,

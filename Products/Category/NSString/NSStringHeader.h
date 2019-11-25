@@ -16,4 +16,6 @@
 #import "NSString+MD5.h"
 #import "NSString+pinyin.h"
 #import "NSString+URLEncoding.h"
+#import "NSString+BLEUtils.h"
+
 #endif /* NSStringHeader_h */

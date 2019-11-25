@@ -27,18 +27,17 @@
 /**
  *  检查文件是否存在
  *
- *  @param fileName 文件名称
+ *  @param filePath 文件路径
  *
  *  @return 如果存在则返回yes
  */
-+ (BOOL) isFileExist:(NSString *)fileName;
 + (BOOL)isFileExistAtPath:(NSString *)filePath;
 
 + (void)checkFlieProtection:(NSString *)path ;
 
-+ (NSString*)FilePaths:(NSString*)fileName;
-
 + (NSUInteger)fileSizes:(NSString *)filePath;
 
 + (NSString*)getFileMD5WithPath:(NSString*)path;
+
+
 @end

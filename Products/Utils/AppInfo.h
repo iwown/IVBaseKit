@@ -22,5 +22,7 @@
 + (NSString *)getBuildVersion;
 //获取app的版本号，比如：5.0（2212）
 + (NSString *)getAppVersion;
+//获取app当前的系统语言
++ (NSString *)getCurrentAppLanguage;
 
 @end

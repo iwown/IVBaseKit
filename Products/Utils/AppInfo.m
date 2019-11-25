@@ -37,4 +37,13 @@
     return appversion;
 }
 
+//获取app当前的系统语言
++ (NSString *)getCurrentAppLanguage {
+    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [defs objectForKey:@"AppleLanguages"];
+    NSString* preferredLang = [languages objectAtIndex:0];
+    NSLog(@"Preferred Language:%@", preferredLang);
+    return preferredLang;
+}
+
 @end

@@ -11,8 +11,13 @@
 @interface NSString (Json)
 
 +(NSString *) jsonStringWithArray:(NSArray *)array;
+
 +(NSString *) jsonStringWithDictionary:(NSDictionary *)dictionary;
+
 +(NSString *) jsonStringWithString:(NSString *) string;
+
 +(NSString *) jsonStringWithObject:(id) object;
-- (id)jsonToObject ;
+
+- (id)jsonToObject;
+
 @end
