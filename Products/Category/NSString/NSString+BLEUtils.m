@@ -150,7 +150,7 @@
 
 #pragma mark - 
 //接收数据时,NSData－>Byte数组->16进制数
-+ (NSString *)NSDataToByteTohex:(NSData *)data {
++ (NSString *)dataToByteTohex:(NSData *)data {
     
     Byte *bytes = (Byte *)[data bytes];
     NSString *hexStr = @"";
@@ -181,7 +181,7 @@
     return hexStr;
 }
 
-+ (int)ToHexInt:(NSString*)tmpid {
++ (int)toHexInt:(NSString*)tmpid {
     
     int int_ch;
     unichar hex_char1 = [tmpid characterAtIndex:0]; ////两位16进制数中的第一位(高位*16)
@@ -208,7 +208,7 @@
     return int_ch;
 }
 
-+ (NSString *)ToHexString:(int)tmpid {
++ (NSString *)toHexString:(int)tmpid {
     NSString *endtmp = @"";
     NSString *nLetterValue;
     NSString *nStrat;

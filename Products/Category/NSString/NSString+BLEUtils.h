@@ -38,16 +38,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 
 // 16进制NSData转换成NSString
-+ (NSString *)NSDataToByteTohex:(NSData *)data;
++ (NSString *)dataToByteTohex:(NSData *)data;
 
 + (NSData *)stringToByte:(NSString *)string;
 
 + (NSString *)hexStringFromString:(NSString *)string;
 
 //两位 16进制转换10进制（高低位互换）
-+ (NSString *)ToHexString:(int)tmpid;
++ (NSString *)toHexString:(int)tmpid;
 
-+ (int)ToHexInt:(NSString *)tmpid;
++ (int)toHexInt:(NSString *)tmpid;
 
 + (NSString *)uint16ToString:(NSInteger)num;
 
