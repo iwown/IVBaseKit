@@ -8,7 +8,7 @@ s.summary      = 'Base class used in iwown iOS developer team'
 
 s.license      = 'MIT'
 
-s.author       = { "xuezou" => "377949550@qq.com" }
+s.author       = { "xuezou" => "377949550@qq.com", "west" => "741415771@qq.com" }
 
 s.homepage     = 'https://github.com/xuezou/IVBaseKit'
 
