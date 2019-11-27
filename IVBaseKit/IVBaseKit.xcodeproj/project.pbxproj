@@ -275,8 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				D65DE6492376C057008B4552 /* BKUtils.h */,
-				D65DE64A2376C057008B4552 /* BKUtils+File.h */,
 				D65DE64B2376C057008B4552 /* BKUtils.m */,
+				D65DE64A2376C057008B4552 /* BKUtils+File.h */,
 				D65DE64C2376C057008B4552 /* BKUtils+File.m */,
 			);
 			path = BKUtils;

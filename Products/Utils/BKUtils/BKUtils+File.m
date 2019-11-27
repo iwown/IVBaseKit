@@ -212,4 +212,15 @@ done:
     return result;
 }
 
++ (NSString *)filePathAtDocumentDirectory:(NSString *)fileName {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    if ([paths count] == 0) {
+        return (id)NO;
+    }
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *dbPath = [documentDirectory stringByAppendingPathComponent:fileName];
+    return dbPath;
+}
+
+
 @end

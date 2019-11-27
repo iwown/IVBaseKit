@@ -37,7 +37,8 @@
 
 + (NSUInteger)fileSizes:(NSString *)filePath;
 
-+ (NSString*)getFileMD5WithPath:(NSString*)path;
++ (NSString*)getFileMD5WithPath:(NSString *)path;
 
++ (NSString *)filePathAtDocumentDirectory:(NSString *)fileName;
 
 @end
