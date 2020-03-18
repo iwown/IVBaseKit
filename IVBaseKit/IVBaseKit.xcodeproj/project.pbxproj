@@ -102,6 +102,8 @@
 		D65DE6522376C057008B4552 /* IVBaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVBaseKit.h; sourceTree = "<group>"; };
 		D66034A52422116700A64867 /* NSData+crc32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+crc32.h"; sourceTree = "<group>"; };
 		D66034A62422116700A64867 /* NSData+crc32.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+crc32.m"; sourceTree = "<group>"; };
+		D668A411242214ED00ABCF43 /* NSDateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDateHeader.h; sourceTree = "<group>"; };
+		D668A4122422153100ABCF43 /* NSDateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSDateHeader.h; path = ../Products/Category/NSDate/NSDateHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		D65DE5EE2376C03E008B4552 = {
 			isa = PBXGroup;
 			children = (
+				D668A4122422153100ABCF43 /* NSDateHeader.h */,
 				D65DE5F92376C03E008B4552 /* IVBaseKit */,
 				D65DE6212376C057008B4552 /* Products */,
 				D65DE6152376C043008B4552 /* IVBaseKitTests */,
@@ -244,6 +247,7 @@
 		D65DE63A2376C057008B4552 /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
+				D668A411242214ED00ABCF43 /* NSDateHeader.h */,
 				D65DE63D2376C057008B4552 /* NSDate+Calendar.h */,
 				D65DE6402376C057008B4552 /* NSDate+Calendar.m */,
 				D65DE63E2376C057008B4552 /* NSDate+Category.h */,
