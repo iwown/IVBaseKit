@@ -12,21 +12,19 @@
 #import "IVUIDeviceTool.h"
 #import "BKUtils.h"
 #import "BKUtils+File.h"
+#import "NSData+crc32.h"
 #import "NSStringHeader.h"
-#import "NSDate+Category.h"
-#import "NSDate+Calendar.h"
-#import "NSDateFormatter+Category.h"
+#import "NSDateHeader.h"
 #import "NSAttributedString+custom.h"
 #import "NSObject+JsonData.h"
 #import "CWWeakProxy.h"
 
 
-
 /*****************************************************************************
 ****
 ** IVBaseKit.h                              *   * * *
-** Version : 1.3.1                          *   *
-** Date : 2019-11-25                        * * * * *
+** Version : 1.3.10                          *   *
+** Date : 2020-03-27                        * * * * *
 **                                              *   *
 **                                          * * *   *
 ****

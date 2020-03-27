@@ -17,7 +17,9 @@
 + (id)dateFormatter;
 + (id)dateFormatterWithFormat:(NSString *)dateFormat;
 
-+ (id)defaultDateFormatter;/*yyyy-MM-dd HH:mm:ss*/
+/*yyyy-MM-dd HH:mm:ss*/
++ (id)defaultDateFormatter;
 
 + (id)internationalFormatter;
+
 @end
