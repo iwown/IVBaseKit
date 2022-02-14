@@ -14,7 +14,7 @@
 #import "NSDateFormatter+Category.h"
 
 #define DATE_COMPONENTS (NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfYear |  NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal)
-#define CURRENT_CALENDAR [NSCalendar currentCalendar]
+#define CURRENT_CALENDAR [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian]
 
 @implementation NSDate (Category)
 
