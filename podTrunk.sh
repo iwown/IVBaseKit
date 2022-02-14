@@ -16,4 +16,4 @@ git push
 git tag ${VERSION}
 git push --tags
 pod lib lint
-pod trunk push IVBaseKit.podspec
+pod trunk push IVBaseKit.podspec --allow-warnings
