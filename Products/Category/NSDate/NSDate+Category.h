@@ -115,6 +115,12 @@
 + (NSDate *)dateWithYearMonthAndDay:(NSInteger)year
                            andMonth:(NSInteger)month
                              andDay:(NSInteger)day;
++ (NSDate *)dateWithYear:(NSInteger)year
+                   month:(NSInteger)month
+                     day:(NSInteger)day
+                    hour:(NSInteger)hour
+                  minute:(NSInteger)minute
+                  second:(NSInteger)second;
 - (NSDate *)dateCopyWithoutSeconds;
 - (NSString *)ymdFormatter;
 + (NSString *)ymdName;

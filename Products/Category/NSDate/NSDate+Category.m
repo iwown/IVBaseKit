@@ -740,6 +740,24 @@ static int ymDay(int y,int m) {
     return [NSDate dateWithDict:mDict];
 }
 
++ (NSDate *)dateWithYear:(NSInteger)year
+                   month:(NSInteger)month
+                     day:(NSInteger)day
+                    hour:(NSInteger)hour
+                  minute:(NSInteger)minute
+                  second:(NSInteger)second
+{
+    
+    NSMutableDictionary *mDict = [NSMutableDictionary dictionaryWithCapacity:0];
+    [mDict setObject:@(year) forKey:@"YEAR"];
+    [mDict setObject:@(month) forKey:@"MONTH"];
+    [mDict setObject:@(day) forKey:@"DAY"];
+    [mDict setObject:@(day) forKey:@"HOUR"];
+    [mDict setObject:@(day) forKey:@"MINUTE"];
+    [mDict setObject:@(day) forKey:@"SECOND"];
+    return [NSDate dateWithDict:mDict];
+}
+
 - (NSString *)ymdFormatter {
     NSDateFormatter *dateFormatter = [NSDateFormatter internationalFormatter];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
