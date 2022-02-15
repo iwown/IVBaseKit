@@ -11,19 +11,19 @@
 @implementation NSDate (Calendar)
 
 - (NSInteger)dateDay {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *components = [calendar components:NSCalendarUnitDay fromDate:self];
     return components.day;
 }
 
 - (NSInteger)dateMonth {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *components = [calendar components:NSCalendarUnitMonth fromDate:self];
     return components.month;
 }
 
 - (NSInteger)dateYear {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:self];
     return components.year;
 }
@@ -32,7 +32,7 @@
 - (NSDate *)nextMonthDate {
     NSDateComponents *components = [[NSDateComponents alloc]init];
     components.month = 1;
-    NSDate *nextMonthDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:self options:NSCalendarMatchStrictly];
+    NSDate *nextMonthDate = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] dateByAddingComponents:components toDate:self options:NSCalendarMatchStrictly];
     return nextMonthDate;
 }
 
@@ -40,18 +40,18 @@
 - (NSDate *)previousMonthDate {
     NSDateComponents *components = [[NSDateComponents alloc]init];
     components.month = -1;
-    NSDate *previousMonthDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:self options:NSCalendarMatchStrictly];
+    NSDate *previousMonthDate = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] dateByAddingComponents:components toDate:self options:NSCalendarMatchStrictly];
     return previousMonthDate;
 }
 
 
 - (NSInteger)totalDaysInMonth {
-    NSInteger totalDays = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self].length;
+    NSInteger totalDays = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self].length;
     return totalDays;
 }
 
 - (NSInteger)firstWeekDayInMonth {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self];
     components.day = 1; // 定位到当月第一天
     NSDate *firstDay = [calendar dateFromComponents:components];
@@ -63,7 +63,7 @@
 }
 
 - (NSDate *)dateStartMonthOfDate {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate *firstDay;
     [calendar rangeOfUnit:NSCalendarUnitMonth startDate:&firstDay interval:nil forDate:self];
     return firstDay;
