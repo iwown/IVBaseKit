@@ -732,63 +732,74 @@ static int ymDay(int y,int m) {
 
 - (NSInteger) nearestHour
 {
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	NSTimeInterval aTimeInterval = [[NSDate date] timeIntervalSinceReferenceDate] + D_MINUTE * 30;
 	NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
-	NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitHour fromDate:newDate];
+	NSDateComponents *components = [calendar components:NSCalendarUnitHour fromDate:newDate];
 	return components.hour;
 }
 
 - (NSInteger) hour
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitHour fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitHour fromDate:self];
     return components.hour;
 }
 
 - (NSInteger) minute
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitMinute fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitMinute fromDate:self];
     return components.minute;
 }
 
 - (NSInteger) seconds
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitSecond fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitSecond fromDate:self];
     return components.second;
 }
 
 - (NSInteger) day
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitDay fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitDay fromDate:self];
     return components.day;
 }
 
 - (NSInteger) month
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitMonth fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitMonth fromDate:self];
     return components.month;
 }
 
 - (NSInteger) week
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitWeekOfYear fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitWeekOfYear fromDate:self];
     return components.weekOfYear;
 }
 
 - (NSInteger) weekday
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitWeekday fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitWeekday fromDate:self];
+    NSLog(@"weekday in pods:%ld",components.weekday);
     return components.weekday;
 }
 
 - (NSInteger) nthWeekday // e.g. 2nd Tuesday of the month is 2
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitWeekdayOrdinal fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitWeekdayOrdinal fromDate:self];
     return components.weekdayOrdinal;
 }
 
 - (NSInteger) year
 {
-    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:self];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:self];
     return components.year;
 }
 
