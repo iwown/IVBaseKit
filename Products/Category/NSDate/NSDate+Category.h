@@ -41,6 +41,8 @@
 + (NSDate *) dateStartOneDay:(NSDate*)date;
 + (NSDate *) dateStartTodayWithHour:(NSInteger)hour;
 + (NSDate *) dateStartHour:(NSInteger)hour ByDate:(NSDate*)date;
+-(NSDate*)dateStartMonthOfDate;
+-(NSDate*)dateEndMonthOfDate;
 /*Keys=@[@"YEAR",@"MONTH",@"DAY",@"HOUR",@"MINUTE",@"SECOND"]*/
 + (NSDate *) dateWithDict:(NSDictionary *)dict;
 /*Array[0]:count*/
@@ -80,7 +82,8 @@
 - (NSDate *) dateByAddingMinutes: (NSInteger) dMinutes;
 - (NSDate *) dateBySubtractingMinutes: (NSInteger) dMinutes;
 - (NSDate *) dateAtStartOfDay;
-
+- (NSDate *) dateBySubtractingMonths: (NSInteger) offset_month;
+- (NSDate *) dateByAddingMonths: (NSInteger) offset_month;
 
 // Retrieving intervals
 - (NSInteger) minutesAfterDate: (NSDate *) aDate;

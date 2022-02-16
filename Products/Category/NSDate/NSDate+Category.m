@@ -262,6 +262,38 @@
     return newDate;
     
 }
+-(NSDate*)dateStartMonthOfDate{
+    NSCalendar *calendar            = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components    = [calendar components: NSUIntegerMax fromDate: self];
+    [components setDay:1];
+
+    NSDate *newDate = [calendar dateFromComponents: components];
+    return newDate;
+}
+-(NSDate*)dateEndMonthOfDate{
+    NSCalendar *calendar            = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components    = [calendar components: NSUIntegerMax fromDate: self];
+    NSInteger day = 31;
+    if(self.month==2){
+        if(self.year%4==0 && self.year%100!=0){
+            day = 29;
+        }
+        else if(self.year%400==0){
+            day = 29;
+        }
+        else{
+            day = 28;
+        }
+    }
+    else if(self.month==4 || self.month==6 || self.month==9 || self.month==11){
+        day = 30;
+    }
+    [components setDay:day];
+
+    NSDate *newDate = [calendar dateFromComponents: components];
+    return newDate;
+}
+
 + (NSDate *)dateWithDict:(NSDictionary *)dict {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
@@ -544,6 +576,70 @@ static int ymDay(int y,int m) {
 - (NSDate *) dateBySubtractingDays: (NSInteger) dDays
 {
 	return [self dateByAddingDays: (dDays * -1)];
+}
+
+- (NSDate *) dateBySubtractingMonths: (NSInteger) offset_month
+{
+    NSInteger prev_month = self.month-offset_month;
+    NSInteger prev_year = self.year;
+    NSInteger prev_day = self.day;
+    while(prev_month<=0){
+        prev_month += 12;
+        prev_year -= 1;
+    }
+    if(prev_day>=29){
+        if(prev_month==2){
+            if(prev_year%4==0 && prev_year%100!=0){
+                prev_day = 28;
+            }
+            else if(prev_year%400==0){
+                prev_day = 28;
+            }
+            else{
+                prev_day = 29;
+            }
+        }
+        else if(prev_month==4 || prev_month==6 || prev_month==9 || prev_month==11 ){
+            if(prev_day>30){
+                prev_day = 30;
+            }
+        }
+    }
+    
+    NSDate *newDate = [NSDate dateWithYear:prev_year month:prev_month day:prev_day hour:self.hour minute:self.minute second:self.seconds];
+    return newDate;
+}
+
+- (NSDate *) dateByAddingMonths: (NSInteger) offset_month
+{
+    NSInteger next_month = self.month+offset_month;
+    NSInteger next_year = self.year;
+    NSInteger next_day = self.day;
+    while(next_month>12){
+        next_month -= 12;
+        next_year += 1;
+    }
+    if(next_day>=29){
+        if(next_month==2){
+            if(next_year%4==0 && next_year%100!=0){
+                next_day = 28;
+            }
+            else if(next_year%400==0){
+                next_day = 28;
+            }
+            else{
+                next_day = 29;
+            }
+        }
+        else if(next_month==4 || next_month==6 || next_month==9 || next_month==11 ){
+            if(next_day>30){
+                next_day = 30;
+            }
+        }
+    }
+
+    NSDate *newDate = [NSDate dateWithYear:next_year month:next_month day:next_day hour:self.hour minute:self.minute second:self.seconds];
+    return newDate;
 }
 
 - (NSDate *) dateByAddingHours: (NSInteger) dHours
