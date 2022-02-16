@@ -740,56 +740,56 @@ static int ymDay(int y,int m) {
 
 - (NSInteger) hour
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.hour;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitHour fromDate:self];
+    return components.hour;
 }
 
 - (NSInteger) minute
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.minute;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitMinute fromDate:self];
+    return components.minute;
 }
 
 - (NSInteger) seconds
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.second;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitSecond fromDate:self];
+    return components.second;
 }
 
 - (NSInteger) day
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.day;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitDay fromDate:self];
+    return components.day;
 }
 
 - (NSInteger) month
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.month;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitMonth fromDate:self];
+    return components.month;
 }
 
 - (NSInteger) week
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.weekOfYear;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitWeekOfYear fromDate:self];
+    return components.weekOfYear;
 }
 
 - (NSInteger) weekday
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.weekday;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitWeekday fromDate:self];
+    return components.weekday;
 }
 
 - (NSInteger) nthWeekday // e.g. 2nd Tuesday of the month is 2
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.weekdayOrdinal;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitWeekdayOrdinal fromDate:self];
+    return components.weekdayOrdinal;
 }
 
 - (NSInteger) year
 {
-	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.year;
+    NSDateComponents *components = [CURRENT_CALENDAR components:NSCalendarUnitYear fromDate:self];
+    return components.year;
 }
 
 - (NSInteger)yearMonthAndDay {
